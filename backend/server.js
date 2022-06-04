@@ -1,7 +1,10 @@
 const express = require("express");
-const res = require("express/lib/response");
 const dotEnv = require("dotenv").config();
 const mongoose = require("mongoose");
+
+// cusotm modules
+const userRoutes = require("./routes/userRoutes");
+const bookRoutes = require("./routes/bookRoutes");
 
 const app = express();
 

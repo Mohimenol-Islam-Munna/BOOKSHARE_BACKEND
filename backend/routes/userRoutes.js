@@ -1,9 +1,12 @@
 const express = require("express");
 
+// custom modules
+const userController = require("../controllers/userController");
+
 const router = express.Router();
 
 // GET: users list
-router.get("/", )
+router.get("/");
 
 // GET: user
 
