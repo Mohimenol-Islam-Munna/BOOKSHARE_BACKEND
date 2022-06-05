@@ -58,6 +58,11 @@ const userSchema = new Schema({
     type: String,
     required: [true, "Department must be required"],
   },
+  roles: {
+    type: String,
+    enum: ["SUPER_ADMIN", "PANEL_ADMIN", "GENERAL_USER"],
+    default: "GENERAL_USER",
+  },
   createdAt: {
     type: Date,
     default: Date.now,
@@ -73,11 +78,6 @@ const userSchema = new Schema({
   },
   suggestedBooks: {
     type: [],
-  },
-  roles: {
-    type: String,
-    enum: ["SUPER_ADMIN", "PANEL_ADMIN", "GENERAL_USER"],
-    default: "GENERAL_USER",
   },
 });
 

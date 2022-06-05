@@ -15,16 +15,20 @@ app.use(express.json());
 // ---------- end application middlewares ------
 
 // ------------------ routes -------------------
-// user routes
+// home routes
 app.get("/", (req, res) => {
-  res.send("home page");
+  res.send("application home page");
 });
 
+// user routes
+app.use("/user", userRoutes);
+
+// admin routes
+
+// page not found
 app.get("*", (req, res) => {
   res.send("page not found");
 });
-
-// admin routes
 
 // ------------------ end routes ------------------
 
