@@ -1,9 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+// coustom modules
+const User = require("../models/user");
+
 // get all user
 exports.getAllUser = (req, res) => {
-  res.send("user list");
+  res.json({ data: "data" });
 };
 
 // get user
