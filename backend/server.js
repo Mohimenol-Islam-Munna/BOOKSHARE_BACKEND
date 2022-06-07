@@ -32,7 +32,7 @@ app.get("*", (req, res) => {
 
 // ------------------ end routes ------------------
 
-// connect to database
+// connect to database and run server
 mongoose.connect(process.env.DB_URL, (err) => {
   if (err) {
     console.log("Database Conection Error");
